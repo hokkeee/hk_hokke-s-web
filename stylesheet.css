@@ -1,0 +1,35 @@
+.header {
+    border-bottom: 3px solid black;
+    font-family:"sans-serif";
+    font-size: 30px;;
+  }
+
+  .header-logo{
+    color:blue;
+  }
+
+  .header-list{
+    font-size: 10px;
+    padding: 33px 20px;
+    font-family:"sans-serif";
+    color:black;
+  }
+
+  .header p{
+    padding-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .hooter{
+    background-color: rgba(255, 126, 126, 0.867);
+  }
+
+  .yahoo{
+    padding-right: 30px;
+    font-size: 30px;
+  }
+
+  .youtube{
+    padding-right: 30px;
+    font-size: 30px; 
+  }

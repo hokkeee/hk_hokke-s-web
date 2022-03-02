@@ -6,27 +6,26 @@
     <meta charset="utf-8">
     <title>YEAH!</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="iine_app/iine.css">  
   </head>
   <body>
     <div class ="header">
-      <h1 class="header-logo">YEAH!</h1>
-      
-      <a href="https://drive.google.com/file/d/1SEHc3NTuJRGfMRQn5oQA8WGF3Gs3vzHU/view?usp=sharing">コメント編集画面の見方</a>
+      <h1 class="header-logo">YEAH!~適当ブログ~</h1>
     </div>
 
 
     <div class="main">
      <div class="youtube">
-       <a href="https://www.youtube.com/">Youtube</a>
+       <a href="https://www.youtube.com/">・Youtube</a>
      </div>
      <div class="yahoo">
-       <a href="https://www.yahoo.co.jp/">yahoo!JAPAN</a>
+       <a href="https://www.yahoo.co.jp/">・yahoo!JAPAN</a>
      </div>
     </div>
 
 
     <div class="footer">
-      <p>コメント欄</p>
      <h3></h3>
      <script data-sil-id="621dfe27647841001e5238c6">var loadWidget = function()
        { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS;
@@ -40,5 +39,29 @@
       <a href="//bawkbox.com/install/blog"></a>
      </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="iine_app/iine.js"></script>
+    <!-- いいねボタンここから -->
+<div id="iine_wrap">
+  <!-- ボタン本体ここから -->
+  <button type="submit" id="iine">
+  <div class="iine_wrap">
+  <i class="material-icons heart">favorite</i>
+  <div class="circle"></div>
+  <span id="countnum"></span>
+  </div>
+  </button>
+  <!-- ボタン本体ここまで -->
+  
+  <!-- お礼メッセージここから -->
+  <div id="iine_thanks" style="display:none;">
+  <div class="box">
+  <img src="iine_app/example.jpg" alt="THANK YOU!">
+  <p>ありがとうございます！</p>
+  </div>
+  </div>
+  <!-- お礼メッセージここまで -->
+  </div>
+  <!-- いいねボタンここまで -->
   </body>
 </html>

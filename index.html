@@ -1,5 +1,4 @@
 # hk_hokke-s-web
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,26 +6,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>YEAH!</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script type="text/javascript" src="/mod/LKBNX/v2.23/demo/cn/cn.php"></script>
   </head>
   <body>
     <div class ="header">
-      <h1 class="header-logo">YEAH!~適当ブログ~</h1>
+      <h1 class="header-logo">YEAH!</h1>
     </div>
 
 
     <div class="main">
-     <div class="youtube">
-       <a href="https://www.youtube.com/">・Youtube</a>
-     </div>
-     <div class="yahoo">
-       <a href="https://www.yahoo.co.jp/">・yahoo!JAPAN</a>
-     </div>
-    </div>
-
-
-    <div class="footer">
-     <h3></h3>
+      <h3></h3>
      <script data-sil-id="621dfe27647841001e5238c6">var loadWidget = function()
        { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS;
        var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; 
@@ -38,8 +26,107 @@
      <div class="sil-widget-blog sil-widget" id="sil-widget-621dfe27647841001e5238c6">
       <a href="//bawkbox.com/install/blog"></a>
      </div>
+     <p>※このページはパソコン推奨です。</p>
+     </div>
+
+
+    <div class="footer">
+     <div class="footer-list">
+        <a href="https://www.youtube.com/">Youtube</a>
+        <a href="https://www.yahoo.co.jp/">yahoo!JAPAN</a>
+        <a href="https://www.google.co.jp/">GOOGLE検索</a>      
+      </div>
+     </div>
     </div>
-    <div class="ajax-iine" data-pid="3wubyxx6um3l23qig6fv" data-tid="tpl-sb-blue-l"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="footer-system">
+      <?=$msg?>
+
+<form onsubmit="sendChatData();return false">
+<table summary="送信フォーム">
+<tr><th style="width:150px">名前(10文字以内)</th><td><input type="text" name="name" value="<?=@$name?>" style="width:100%" maxlength="10" required /></td></tr>
+<tr><th>文章(50文字以内)</th><td><input type="text" name="text" value="" style="width:100%" maxlength="50" required /></td></tr>
+</table>
+<p><input type="submit" value="送信" class="button" /></p>
+</form>
+
+<table summary="チャット">
+<tr><th style="width:150px">名前</th><th style="width:180px">投稿日時</th><th>文章</th></tr>
+<tbody id="board">
+<?foreach($_chat as $val){?>
+<tr><td><?=htmlspecialchars($val["name"])?></td><td><?=substr($val["date"],5,14)?></td><td><?=htmlspecialchars($val["text"])?></td></tr>
+<?}?>
+</tbody>
+</table>
+
+<script type="text/javascript">
+
+// 名前か文章にカーソルをフォーカス
+if(document.getElementsByName("text")[0]) document.getElementsByName("text")[0].focus();
+if(document.getElementsByName("name")[0]) document.getElementsByName("name")[0].focus();
+
+// xmlHttpObjectの作成
+function createXMLHttpRequest(){
+	var xmlHttpObject = null;
+	if(window.XMLHttpRequest){
+		xmlHttpObject = new XMLHttpRequest();
+	}else if(window.ActiveXObject){
+		try{
+			xmlHttpObject = new ActiveXObject("Msxml2.XMLHTTP");
+		}catch(e){
+			try{
+				xmlHttpObject = new ActiveXObject("Microsoft.XMLHTTP");
+			}catch(e){
+				return null;
+			}
+		}
+	}
+	return xmlHttpObject;
+}
+
+// チャットの内容の取得
+function loadChatData(){
+	xmlHttpObject = createXMLHttpRequest();
+	xmlHttpObject.onreadystatechange = displayHtml;
+	xmlHttpObject.open("GET","/loadChatData.php",true);
+	xmlHttpObject.send(null);
+}
+
+// 新たな書き込みがあった場合に表示する
+function displayHtml(){
+	if((xmlHttpObject.readyState == 4) && (xmlHttpObject.status == 200) && xmlHttpObject.responseText){
+		document.getElementById("board").innerHTML = xmlHttpObject.responseText + document.getElementById("board").innerHTML;
+	}
+}
+
+// チャットに書き込みをする
+function sendChatData(){
+	xmlHttpObject = createXMLHttpRequest();
+	xmlHttpObject.open("POST","/sendChatData.php",true);
+	xmlHttpObject.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	xmlHttpObject.send("name="+encodeURIComponent(document.getElementsByName("name")[0].value)+"&text="+encodeURIComponent(document.getElementsByName("text")[0].value));
+	document.getElementsByName("text")[0].value = "";
+	loadChatData();
+}
+
+// 2秒ごとにチャットの内容を取りに行く
+setInterval('loadChatData()',2000);
+
+</script>
+    </div>
       
   </body>
 </html>

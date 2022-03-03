@@ -3,20 +3,11 @@
     font-family:"sans-serif";
     font-size: 30px;;
     background-color: aqua;
-    margin-left: 200px;
-    margin-right: 200px;
   }
 
   .header-logo{
     color:blue;
     margin-left: 200px;
-  }
-
-  .header-list{
-    font-size: 10px;
-    padding: 33px 20px;
-    font-family:"sans-serif";
-    color:black;
   }
 
    .main{
@@ -28,17 +19,17 @@
     font-size: 25px;
   }
 
-  .hooter{
-    background-color: rgba(255, 126, 126, 0.867);
+  .footer{
     margin-left: 300px;
   }
 
-  .yahoo{
-    padding-right: 30px;
-    font-size: 30px;
-  }
+  
+.footer-list{
+  padding-right: 30px;
+  font-size: 30px;
+}
 
-  .youtube{
-    padding-right: 30px;
-    font-size: 30px; 
-  }
+.footer-system{
+  margin-left: 350px;
+  float: left;
+}

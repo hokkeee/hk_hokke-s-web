@@ -1,19 +1,54 @@
 .header {
     border-bottom: 3px solid black;
     font-family:"sans-serif";
-    font-size: 30px;;
+    font-size: 30px;
     background-color: aqua;
   }
 
   .header-logo{
     color:blue;
-    margin-left: 200px;
+    margin-left: 50px;
   }
-
-   .main{
-    margin-left: 300px;
-  }
+  
+.footer-list{
+  padding-right: 30px;
+  font-size: 30px;
+}
 
 .footer-system{
   padding-left: 100px 100px;
+}
+
+.header form{
+  float: right;
+}
+
+.header-p{
+  font-size: 15px;
+  padding: 15px;
+}
+
+.sw h2{
+  border-bottom: 5px solid red;
+  font-size: 30px;
+}
+
+.url{
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.url2{
+  font-size: 20px;
+  padding-left: 100px;
+}
+
+.cdt h2{
+  border-bottom: 5px solid red;
+  font-size: 30px;
+}
+
+.watch h2{
+  border-bottom: 5px solid red;
+  font-size: 30px;
 }

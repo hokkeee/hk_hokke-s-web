@@ -28,7 +28,7 @@
   padding: 15px;
 }
 
-.sw h2{
+.main h2{
   border-bottom: 5px solid red;
   font-size: 30px;
 }
@@ -41,14 +41,4 @@
 .url2{
   font-size: 20px;
   padding-left: 100px;
-}
-
-.cdt h2{
-  border-bottom: 5px solid red;
-  font-size: 30px;
-}
-
-.watch h2{
-  border-bottom: 5px solid red;
-  font-size: 30px;
 }

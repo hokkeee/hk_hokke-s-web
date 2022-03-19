@@ -1,31 +1,23 @@
 .header {
-    border-bottom: 3px solid black;
-    font-family:"sans-serif";
-    font-size: 30px;
-    background-color: aqua;
-  }
-
-  .header-logo{
-    color:blue;
-    margin-left: 50px;
-  }
-  
-.footer-list{
-  padding-right: 30px;
+  border-bottom: 3px solid black;
+  font-family:"sans-serif";
   font-size: 30px;
+  background-color: aqua;
+  }
+
+.header-logo{
+  color:blue;
 }
 
-.footer-system{
-  padding-left: 100px 100px;
-}
-
-.header form{
-  float: right;
-}
-
-.header-p{
+.header p{
   font-size: 15px;
-  padding: 15px;
+}
+
+.main{
+  float: left;
+  background-color: antiquewhite;
+  width: 1150px;
+  height: 1000px;
 }
 
 .main h2{
@@ -33,12 +25,35 @@
   font-size: 30px;
 }
 
-.url1{
+.main p{
+  color: antiquewhite;
+}
+
+.url{
   font-size: 20px;
-  margin-left: 10px;
 }
 
 .url2{
   font-size: 20px;
-  padding-left: 100px;
+}
+
+
+.main-side{
+  width: 400px;
+  height: 1000px;
+  background-color: rgb(174, 206, 209);
+  float: right;
+}
+
+.site-url{
+  color: green;
+  margin-left: 10px;
+}
+
+.convinience{
+  white-space: nowrap;
+}
+
+.game{
+  white-space: nowrap;
 }

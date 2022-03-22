@@ -16,8 +16,8 @@
 .main{
   float: left;
   background-color: antiquewhite;
-  width: 1150px;
-  height: 1200px;
+  width: 700px;
+  height: 1500px;
 }
 
 .main h2{
@@ -39,8 +39,8 @@
 
 
 .main-side{
-  width: 400px;
-  height: 1200px;
+  width: 250px;
+  height: 1500px;
   background-color: rgb(174, 206, 209);
   float: right;
 }
@@ -56,4 +56,9 @@
 
 .game{
   white-space: nowrap;
+}
+
+.footer{
+  background-color: black;
+  color: write;
 }

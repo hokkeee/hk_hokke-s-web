@@ -58,7 +58,6 @@
   white-space: nowrap;
 }
 
-.footer{
-  background-color: black;
-  color: write;
+.footer p{
+  font-size: 25px;
 }

@@ -5,6 +5,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>YEAH!~ウェブ上便利ツール~</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script>
+
+      var pw;
+      
+      pw = prompt("パスワードを入れて下さい。","");
+      
+      if (pw == "abcde"){
+        location.href = "kakure.html";
+      }else{
+        alert("パスワードが違います！");
+      }
+      
+      </script>
   </head>
   <body>
     <div class ="header">
@@ -68,9 +81,15 @@
     
     
     <div class="footer">
-     
-
-      
+      <h3></h3><!-- Start BawkBox Code-->
+      <script data-sil-id="621dfe27647841001e5238c6">var loadWidget = function() {
+       var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS;
+        var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t);
+         if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/blog/621dfe27647841001e5238c6?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; };
+          if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(
+            function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script>
+            <div class="sil-widget-blog sil-widget" id="sil-widget-621dfe27647841001e5238c6"><a href="//bawkbox.com/install/blog"></a>
+            </div><!-- End BawkBox Code-->
     </div>
   </body>
 </html>
